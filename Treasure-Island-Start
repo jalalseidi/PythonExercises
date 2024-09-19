@@ -1,0 +1,66 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+
+# First choice
+choice1 = input('You\'re at a dense forest. There\'s a path that splits into two. Do you go "left" towards the mountains or "right" towards the river? \n').lower()
+
+if choice1 == "left":
+    # Second choice
+    choice2 = input('You reach the base of a mountain. There is a cave entrance and a steep trail. Do you "enter" the cave or "climb" the trail? \n').lower()
+
+    if choice2 == "enter":
+        # Third choice
+        choice3 = input("Inside the cave, you find three tunnels: one leads to a light, one is dark, and one has a soft glow. Do you choose the 'light', 'dark', or 'glow' tunnel? \n").lower()
+
+        if choice3 == "light":
+            print("You find a hidden passage filled with gold and jewels! You Win!")
+        elif choice3 == "dark":
+            print("You stumble into a pit and can't get out. Game Over.")
+        elif choice3 == "glow":
+            print("You encounter a nest of giant spiders. Game Over.")
+        else:
+            print("You chose a tunnel that doesn't exist. Game Over.")
+    else:
+        print("You slip on the trail and fall. Game Over.")
+elif choice1 == "right":
+    # Second choice
+    choice2 = input('You follow the river and find a rickety bridge and a boat tied to a post. Do you "cross" the bridge or "sail" down the river? \n').lower()
+
+    if choice2 == "cross":
+        # Third choice
+        choice3 = input("On the other side, you see a ruined castle, a small cottage, and a dark forest. Where do you go: 'castle', 'cottage', or 'forest'? \n").lower()
+
+        if choice3 == "castle":
+            print("The castle is haunted by ghosts. Game Over.")
+        elif choice3 == "cottage":
+            print("You find a kind old woman who gives you the treasure! You Win!")
+        elif choice3 == "forest":
+            print("You get lost in the forest and can't find your way out. Game Over.")
+        else:
+            print("You chose a destination that doesn't exist. Game Over.")
+    else:
+        print("The boat capsizes and you drown. Game Over.")
+else:
+    print("You wander aimlessly until you starve. Game Over.")

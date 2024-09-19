@@ -1,0 +1,17 @@
+def calculate_bmi(weight, height):
+    # Calculate BMI using the formula: BMI = weight (kg) / (height (m))^2
+    bmi = weight / (height ** 2)
+
+    # Determine the BMI category using if/elif/else statements
+    if bmi < 18.5:
+        print("underweight")
+    elif 18.5 <= bmi < 25:
+        print("normal weight")
+    else:  # This handles the case where BMI is 25 or over
+        print("overweight")
+
+# Example usage
+weight = 70  # Example weight in kg
+height = 1.75  # Example height in meters
+calculate_bmi(weight, height)
+
