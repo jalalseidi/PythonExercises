@@ -18,9 +18,12 @@ guess = input("Guess a letter: ")
 print(f"You guessed: {guess.lower()}")
 # Loop through each letter in the chosen word and ask the user to guess
 
+display = ""
+
 for x in chosen_word:
 
     if guess == x:
-        print("Right")
+        display += x
     else:
-        print("Wrong")
+        display += "_"
+print(display)
