@@ -14,16 +14,28 @@ for position in range(word_length):
     placeholder += "_"
 print(placeholder)
 
-guess = input("Guess a letter: ")
-print(f"You guessed: {guess.lower()}")
+correct_letter = []
+
+game_over = False
+
+while not game_over:
+    guess = input("Guess a letter: ")
+    print(f"You guessed: {guess.lower()}")
 # Loop through each letter in the chosen word and ask the user to guess
 
-display = ""
+    display = ""
 
-for x in chosen_word:
+    for x in chosen_word:
 
-    if guess == x:
-        display += x
-    else:
-        display += "_"
-print(display)
+        if guess == x:
+            display += x
+            correct_letter.append(guess)
+        elif x in correct_letter:
+            display += x
+        else:
+            display += "_"
+    print(display)
+
+    if "_" not in display:
+        game_over = True
+        print("You Win.")
