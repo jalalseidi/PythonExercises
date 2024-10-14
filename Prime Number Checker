@@ -1,0 +1,17 @@
+import math
+
+def is_prime(num):
+    # Handle edge cases for numbers less than 2
+    if num <= 1:
+        return False
+
+    # Check for factors from 2 up to the square root of the number
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            return False  # A divisor other than 1 and itself was found
+    
+    return True  # No divisors found, it's a prime number
+
+# Example usage
+print(is_prime(73))  # Output: True
+print(is_prime(75))  # Output: False

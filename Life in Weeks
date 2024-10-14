@@ -1,0 +1,12 @@
+def life_in_weeks(current_age):
+    # Define the target age
+    target_age = 90
+
+    # Calculate the number of weeks left
+    weeks_left = (target_age - current_age) * 52
+
+    # Print the output message with the calculated number of weeks
+    print(f"You have {weeks_left} weeks left.")
+
+# Example usage
+life_in_weeks(56)  # Replace 56 with any other age for testing
